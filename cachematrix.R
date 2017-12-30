@@ -11,7 +11,8 @@ makeCacheMatrix <- function(x = matrix()) {
         ## Create a function to store the matrix in variable x
         set <- function(y){
                 x <<- y
-                cache <<- NULL}
+                cache <<- NULL
+                }
         
         ## Create a function to retrieve matrix stored in x
         get<-function() x
@@ -42,7 +43,7 @@ cacheSolve <- function(x, ...) {
         
         ## Retrieve inverse from the cache and display message if the value is not null
         if(!is.null(cache)){
-                message("inverse value exists")
+                message("cached inverse value exists")
                 return(cache)
                 }
         
@@ -57,4 +58,4 @@ cacheSolve <- function(x, ...) {
         
         ## Return inverse
         cache
-        
+}
